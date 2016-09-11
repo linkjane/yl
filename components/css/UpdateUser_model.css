@@ -1,0 +1,40 @@
+.btn_footer_size{
+    width: 100px;
+    height: 25px;
+    padding: 0px;
+    text-align: center;
+}
+
+.modal_input{
+    border-radius: 0px;
+    height: 30px;
+    margin-left: 0px;
+}
+
+hr{
+    margin: 0px;
+}
+
+.hr_260{
+    margin-left: 15px; width: 260px;margin-bottom: 17px
+}
+
+.noNull{
+    font-size: 22px;
+    color: #FF0000;
+    float: left;
+    margin-left: -25px;
+    padding-top: 2px;
+    margin-bottom: -2px;
+}
+
+.userImg{
+    margin-top: -600px;
+    width: 100px;
+    height: 100px;
+}
+
+.form_box{
+    margin-left: -20px;
+    margin-top: 10px;
+}

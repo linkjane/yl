@@ -1,0 +1,40 @@
+{
+  "title": {
+    "text": ""
+  },
+  "tooltip": {},
+  "legend": {
+    "x":"center",
+    "y":"310px",
+    "data":["data1","data2"]
+  },
+  "xAxis": [
+    {
+      "data": ["days","days","days","days","days","days"]
+    }
+  ],
+  "yAxis": {
+    "type":"value"
+  },
+  "series": [
+    {
+      "name": "data1",
+      "type": "line",
+      "data": [710, 600, 350, 520, 210, 88]
+    },
+    {
+      "name": "data2",
+      "type": "line",
+      "data": [180, 280, 100, 250, 550, 301]
+    }
+  ],
+  "grid": {
+    "x": 70,
+    "y": 10,
+    "x2": 40,
+    "y2": 80,
+    "backgroundColor": "rgba(0,0,0,0)",
+    "borderWidth": 1,
+    "borderColor": "#ccc"
+  }
+}

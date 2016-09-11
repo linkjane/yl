@@ -1,0 +1,323 @@
+<div class="container-fluid bgPadding">
+    <div class="user_countBox">
+        <span class="user_count">总群组（班级）数：</span><span class="user_count">{{regNum.regUserNum}}</span>
+    </div>
+    <div class="row">
+        <div class="select_panel">
+            <div class="input-group input-group-sm select_box">
+                <input type="text" class="form-control" placeholder="请输入关键字搜索" ng-model="selectClassList.keyWord">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button" ng-click=""><span class="glyphicon glyphicon-search"></span></button>
+                    </span>
+            </div>
+            <div class="role_box">
+                <select class="form-control select_list" ng-model="selectClassList.Type">
+                    <option>不限</option>
+                    <option>活跃</option>
+                    <option>已解散</option>
+                </select>
+            </div>
+            <div class="date_box">
+                <span style="line-height: 30px;">创建日期：</span>
+                <div class="input-group input-group-sm date_list">
+                    <input id="endDate" type="text" class="form-control" placeholder="请选择日期" disabled ng-model="selectClassList.endDate"/>
+                    <span class="input-group-btn">
+                        <button id="dateTimePick2" class="btn btn-default" type="button" data-date-format="dd MM yyyy" data-link-field="endDate" data-link-format="yyyy-mm-dd"><span class="glyphicon glyphicon-calendar"></span></button>
+                    </span>
+                </div>
+                <span class="data_line">-</span>
+                <div class="input-group input-group-sm date_list">
+                    <input id="startDate" type="text" class="form-control" placeholder="请选择日期" disabled ng-model="selectClassList.startDate"/>
+                    <span class="input-group-btn">
+                        <button id="dateTimePick1" class="btn btn-default" type="button" data-date-format="dd MM yyyy" data-link-field="startDate" data-link-format="yyyy-mm-dd"><span class="glyphicon glyphicon-calendar"></span></button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="table_panel">
+            <div class="btn_panel">
+                <!-- 暂时不需要添加群组功能 -->
+                <!--<button style="display: none" class="btn btn-primary" data-target="#updateClass_model" data-toggle="modal" ng-click="AddClass()"><span class="glyphicon glyphicon-plus"></span>添加群组</button>-->
+                <button class="btn btn-primary" ng-click="" data-target="#deleteUser_model" data-toggle="modal"><span class="glyphicon glyphicon-trash"></span>批量删除</button>
+            </div>
+            <div class="table_box">
+                <table class="table table-hover table-bordered table-striped">
+                    <thead>
+                    <tr>
+                        <th class="">选择</th>
+                        <th class="">序号</th>
+                        <th class="">群组ID</th>
+                        <th class="">群组名称</th>
+                        <th class="">创建教师</th>
+                        <th class="">群组成员</th>
+                        <th class="">群组状态</th>
+                        <th class="">末次活动时间</th>
+                        <th class="">操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="classlist in classData"><!-- bind data -->
+                        <td class=""><input type="checkbox" ng-model="classlist.status"></td>
+                        <td class="">{{(paginationConf.currentPage - 1) * paginationConf.itemsPerPage + $index + 1}}</td>
+                        <td class="" ng-bind="classlist.ID">[数据绑定]</td>
+                        <td class="" ng-bind="classlist.className">[数据绑定]</td>
+                        <td class="" ng-bind="classlist.regTechName">[数据绑定]</td>
+                        <td class="" ng-bind="classlist.classNum">[数据绑定]</td>
+                        <td class="" ng-bind="classlist.classType">[数据绑定]</td>
+                        <td class="" ng-bind="classlist.TypeTime">[数据绑定]</td>
+                        <td class="">
+                            <span class="glyphicon glyphicon-trash" data-target="#deleteUserForId_model" data-toggle="modal"></span>
+                            <span class="glyphicon glyphicon-pencil" ng-click="getUpdateClass(classlist)" data-target="#updateClass_model" data-toggle="modal"></span>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div page pagination-conf="paginationConf" pagination-click="getUserData()"></div>
+        </div>
+    </div>
+</div>
+
+<!-- model View -->
+<div id="updateClass_model" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p><span class="glyphicon glyphicon-pencil"></span>{{modalData.modalName}}</p>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <form action="" class="form-horizontal form_box">
+                            <div class="form-group">
+                                <label class="control-label col-xs-3">群组ID：</label>
+                                <div class="col-xs-5">
+                                    <input ng-model="modalData.ID" class="form-control modal_input" type="text" disabled/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-xs-3">群组名称：</label>
+                                <div class="col-xs-5">
+                                    <input ng-model="modalData.className" class="form-control modal_input" type="text"/>
+                                </div>
+                                <div class="col-xs-1"><span class="noNull">*</span></div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-xs-3">创建者：</label>
+                                <div class="col-xs-5">
+                                    <input ng-model="modalData.regTechName" class="form-control modal_input" type="text"/>
+                                </div>
+                                <div class="col-xs-1"><span class="noNull">*</span></div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-xs-3">群组状态：</label>
+                                <div class="col-xs-5">
+                                    <select ng-model="modalData.classType" name="" id="" class="form-control modal_input">
+                                        <option>活跃</option>
+                                        <option>已解散</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <hr class="hr_398"/>
+                    <div class="row">
+                        <div class="userImg_box">
+                            <div class="col-sm-2" ng-repeat="memberlist in modalData.classMember">
+                                <input class="{{inputStyle}}" type="checkbox"/>
+                                <div>
+                                    <span style="display: none" ng-bind="memberlist.ID"></span>
+                                    <img class="userImgForClass" src={{memberlist.imgUrl}} alt="" onerror="this.src='img/userImg404.png'"/>
+                                    <p class="icon_font">{{memberlist.name}}</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="btn_50" data-target="#AddClass" data-toggle="modal">
+                                    <span class="glyphicon glyphicon-plus icon_add"></span>
+                                </div>
+                                <p class="icon_font" ng-click="addClassMember()">
+                                    添加成员
+                                </p>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="btn_50" ng-click="showCheck()">
+                                    <span class="glyphicon glyphicon-minus icon_del"></span>
+                                </div>
+                                <p class="icon_font">
+                                    删除成员
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-success btn_footer_size" ng-click="saveClass()">保&nbsp;&nbsp;存</button>
+                <button class="btn btn-primary btn_footer_size" data-dismiss="modal">取&nbsp;&nbsp;消</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- model View -->
+<div id="AddClass" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p><span class="glyphicon glyphicon-pencil"></span>添加用户至群组</p>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row nav_panel" role="tablist">
+                        <a id="selectUser" class="btn btn-primary btn_AddUserForClass" data-target="#selectUserPanel" data-toggle="tab">从已有用户添加</a>
+                        <a id="addUser" class="btn btn-primary btn_AddUserForClass" data-target="#addUserPanel" data-toggle="tab">添加新用户</a>
+                    </div>
+                    <div class="row modal_table_box tab-content">
+                        <div id="selectUserPanel" role="tabpanel" class="tab-pane active container-fluid">
+                            <div class="row selectInput">
+                                <div class="col-md-8">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="请输入搜索条件" ng-model="seleteUser.keyWord">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-default" type="button" ng-click="selectUserForClass()"><span class="glyphicon glyphicon-search"></span></button>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <select class="form-control" ng-model="seleteUser.role">
+                                        <option>非教师</option>
+                                        <option>教师</option>
+                                        <option>其他</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <table class="table table-hover table-bordered table-striped table_page table_box">
+                                <thead>
+                                <tr>
+                                    <td>选择</td>
+                                    <td>序号</td><!-- Q -->
+                                    <td>手机号</td>
+                                    <td>角色</td>
+                                    <td>真实姓名</td>
+                                </tr>
+                                </thead>
+                                <tbody ng-repeat="userlist in userData">
+                                <tr>
+                                    <td><input type="checkbox" ng-model="userlist.status"/></td>
+                                    <td class="">{{(paginationConf.currentPage - 1) * paginationConf.itemsPerPage + $index + 1}}</td>
+                                    <td ng-bind="userlist.tel">[数据绑定]</td>
+                                    <td ng-bind="userlist.role">[数据绑定]</td>
+                                    <td ng-bind="userlist.name">[数据绑定]</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <div class="selectTable"></div>
+                        </div>
+                        <div id="addUserPanel" role="tabpanel" class="tab-pane">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-xs-11">
+                                        <form action="" class="form-horizontal form_box">
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-3" for="userID">用户账号：</label>
+                                                <div class="col-xs-6">
+                                                    <input id="userID" class="form-control modal_input" type="text" placeholder="请输入账号" ng-model="addUser.tel"/>
+                                                </div>
+                                                <div class="col-xs-1"><span class="noNull">*</span></div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-3">用户角色：</label>
+                                                <div class="col-xs-6">
+                                                    <select ng-model="addUser.role" class="form-control modal_input">
+                                                        <option>非教师</option>
+                                                        <option>教师</option>
+                                                        <option>管理员</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-xs-1"><span class="noNull">*</span></div>
+                                            </div>
+                                            <hr class="col-xs-offset-1" style="margin-left: 15px; width: 260px;margin-bottom: 17px">
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-3" for="userName">用户姓名：</label>
+                                                <div class="col-xs-6">
+                                                    <input id="userName" class="form-control modal_input" type="text" placeholder="请输入用户姓名" ng-model="addUser.name"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-3">性别：</label>
+                                                <div class="col-xs-6">
+                                                    <select ng-model="addUser.sex" class="form-control modal_input">
+                                                        <option>-- 未设置 --</option>
+                                                        <option>男</option>
+                                                        <option>女</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <hr class="col-xs-offset-1" style="margin-left: 15px; width: 260px;margin-bottom: 17px">
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-3">科室信息：</label>
+                                                <div class="col-xs-6">
+                                                    <select id="FirstDepName" class="form-control modal_input" ng-model="addUser.FirstDepId" ng-options="m.id as m.DepName for m in addUser.FirstDepName">
+                                                        <option value="">-- 未设置 --</option>
+                                                    </select>
+                                                    <select class="form-control modal_input" ng-model="addUser.SecondDepId" ng-options="m.id as m.DepName for m in addUser.SecondDepName">
+                                                        <option value="">-- 未设置 --</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div style="float: right;">
+                                    <img class="img-thumbnail userImg" src={{modalData.imgUrl}}>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-success btn_footer_size" data-dismiss="modal" ng-click="addUserInClass(userlist)">保&nbsp;&nbsp;存</button>
+                <button class="btn btn-primary btn_footer_size" data-dismiss="modal">取&nbsp;&nbsp;消</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- model View -->
+<div id="deleteUserForId_model" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p><span class="glyphicon glyphicon-exclamation-sign"></span>提示</p>
+            </div>
+            <div class="modal-body">
+                <p class="message"><span class="glyphicon glyphicon-exclamation-sign glyphicon_big glyphicon_red"></span> 确定要删除以上信息吗？</p>
+                <div class="btn_mes_panel">
+                    <button class="btn btn-success btn_footer_size"  ng-click="deleteClassForID(classlist)">确&nbsp;&nbsp;定</button>
+                    <button class="btn btn-danger btn_footer_size" data-dismiss="modal">取&nbsp;&nbsp;消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- model View -->
+<div id="deleteUser_model" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p><span class="glyphicon glyphicon-exclamation-sign"></span>提示</p>
+            </div>
+            <div class="modal-body">
+                <p class="message"><span class="glyphicon glyphicon-exclamation-sign glyphicon_big glyphicon_red"></span> 确定要删除以上信息吗？</p>
+                <div class="btn_mes_panel">
+                    <button class="btn btn-success btn_footer_size" ng-click="deleteClass(classlist)">确&nbsp;&nbsp;定</button>
+                    <button class="btn btn-danger btn_footer_size" data-dismiss="modal">取&nbsp;&nbsp;消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

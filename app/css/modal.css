@@ -1,0 +1,191 @@
+.btn_footer_size{
+    width: 100px;
+    height: 25px;
+    padding: 0px;
+    text-align: center;
+}
+
+.modal_input{
+    border-radius: 0px;
+    height: 30px;
+    margin-left: 0px;
+}
+
+hr{
+    margin: 0px;
+}
+
+.hr_260{
+    margin-left: 15px; width: 260px;margin-bottom: 17px;
+}
+
+.noNull{
+    font-size: 22px;
+    color: #FF0000;
+    float: left;
+    margin-left: -25px;
+    padding-top: 2px;
+    margin-bottom: -2px;
+}
+
+.userImg{
+    margin-top: -510px;
+    width: 100px;
+    height: 100px;
+}
+
+.form_box{
+    margin-left: -20px;
+    margin-top: 10px;
+}
+
+.message {
+    margin-left: 50px;
+    margin-top: 30px;
+    margin-bottom: 45px;
+    font-family: 微软雅黑;
+}
+.glyphicon_big{
+    font-size: 40px;
+    margin-right: 40px;
+}
+
+.glyphicon_red{
+    color: #c12e2a;
+}
+
+.glyphicon_green{
+    color: #62c462;
+}
+
+.btn_mes_panel{
+    text-align: right;
+}
+
+.pageInput{
+    width: 40px;
+}
+
+.userImgForClass{
+    width: 50px;
+    height: 50px;
+}
+
+.userImg_box{
+    overflow: auto;
+    height: 260px;
+}
+
+.hr_398{
+    width: 398px;
+    height: 1px;
+    color: #000000;
+    margin: 0px 10px 10px 0px;
+}
+
+.btn_50{
+    width: 50px;
+    height: 50px;
+    border-color: #747474;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    background-color: #EEEEEE;
+}
+
+.icon_add{
+    font-size: 40px;
+    margin-left: 5px;
+    margin-top: 2px;
+    color: #747474;
+}
+
+.icon_del{
+    font-size: 40px;
+    margin-left: 2px;
+    margin-top: 2px;
+    color: #747474;
+}
+
+.icon_font{
+    text-align: center;
+    font-size: 12px;
+    width: 50px;
+}
+
+input[type=checkbox].userCheckOFF{
+    position: absolute;
+    margin: 1px 0px 0px 37px;
+    line-height: normal;
+    z-index: -1;
+}
+
+input[type=checkbox].userCheckON{
+    position: absolute;
+    margin: 1px 0px 0px 37px;
+    line-height: normal;
+    z-index: 1;
+}
+
+.btn_AddUserForClass{
+    width: 170px;
+    height: 34px;
+}
+
+.nav_panel{
+    text-align: center;
+}
+
+.modal_table_box{
+    height: 420px;
+    border: 1px;
+    border-color: #9d9d9d;
+    border-style: solid;
+    margin-top: 10px;
+    overflow: auto;
+}
+
+.selectInput{
+    margin-top: 10px;
+}
+
+.table_page{
+    margin-top: 10px;
+}
+
+.modal_big{
+    width: 700px;
+}
+
+.hr_640{
+    width: 640px;
+    height: 1px;
+    color: #000000;
+    margin: 0px 10px 10px 0px;
+}
+
+.sound_panel{
+    width: auto;
+    height: 80px;
+    border: 1px solid #ccc;
+}
+
+.Img3D_panel{
+    width: auto;
+    height: 150px;
+    border: 1px solid #ccc;
+}
+
+.addBtn{
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.minusBtn{
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.soundMain_panel{
+    margin: 10px;
+}

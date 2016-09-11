@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../app/css/bootstrap-extend.css"/>
+    <link rel="stylesheet" href="css/UpdateUser_model.css"/>
+    <link rel="stylesheet" href="css/AddmemberForClass_model.css"/>
+    <link rel="stylesheet" href="css/sound.css"/>
+</head>
+<body>
+<button class="btn btn-default" data-target="#modalName" data-toggle="modal">click</button>
+<div id="modalName" class="modal fade">
+    <div class="modal-dialog modal_big">
+        <div class="modal-content modal_big">
+            <div class="modal-header">
+                <p><span class="glyphicon glyphicon-plus"></span>添加资源库音源</p>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xs-8">
+                            <input type="text" class="form-control" placeholder="请输入关键字搜索"/>
+                        </div>
+                        <div class="col-xs-4">
+                            <select name="" id="" class="form-control">
+                                <option>所属听诊点</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row modal_table_box">
+                        <div class="col-xs-12">
+                            <div class="">
+                                <table class="table table-hover table-bordered table-striped table_page">
+                                    <thead>
+                                    <tr>
+                                        <th>选择</th>
+                                        <th>编号</th>
+                                        <th>音源名称</th>
+                                        <th>所在听诊点</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td><input type="radio" ng-model="userlist.status"></td>
+                                        <td>[数据绑定]</td><!--<td>{{(paginationConf.currentPage - 1) * paginationConf.itemsPerPage + $index + 1}}</td>-->
+                                        <td>[数据绑定]</td>
+                                        <td>[数据绑定]</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-success btn_footer_size" data-dismiss="modal">确&nbsp;&nbsp;定</button>
+                <button class="btn btn-primary btn_footer_size" data-dismiss="modal">取&nbsp;&nbsp;消</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

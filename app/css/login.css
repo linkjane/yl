@@ -1,0 +1,30 @@
+.bgimg{
+    top: auto;
+    bottom: auto;
+    width: 100%;
+    height: 100%;
+    position:fixed;
+    background-image: url(../img/pattern.jpg);
+}
+
+#login_form-group{
+    width: 500px;
+    height: 300px;
+    background-color: #9d9d9d;
+
+}
+
+.login_page{
+    width: 450px;
+    height: 300px;
+    background-color: #333333;
+    margin:0 auto;
+    margin-top: 200px;
+    color: #ffffff;
+}
+
+.title{
+    padding-top: 50px;
+    padding-bottom: 30px;
+    text-align: center;
+}

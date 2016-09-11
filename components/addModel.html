@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../app/css/bootstrap-extend.css"/>
+    <link rel="stylesheet" href="css/UpdateUser_model.css"/>
+    <link rel="stylesheet" href="css/AddmemberForClass_model.css"/>
+    <link rel="stylesheet" href="css/sound.css"/>
+</head>
+<body>
+<button class="btn btn-default" data-target="#modalName" data-toggle="modal">click</button>
+<div id="modalName" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p><span class="glyphicon glyphicon-pencil"></span>添加模块</p>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <form action="" class="form-horizontal">
+                            <div class="form-group">
+                                <label class="col-xs-3 control-label" for="">模块名称：</label>
+                                <div class="col-xs-8">
+                                    <input type="text" class="form-control modal_input"/>
+                                </div>
+                                <div class="col-xs-1"><span class="noNull">*</span></div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-xs-3 control-label" for="">模块地址：</label>
+                                <div class="col-xs-8">
+                                    <input type="text" class="form-control modal_input"/>
+                                </div>
+                                <div class="col-xs-1"><span class="noNull">*</span></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-success btn_footer_size">确&nbsp;&nbsp;定</button>
+                <button class="btn btn-primary btn_footer_size">确&nbsp;&nbsp;定</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

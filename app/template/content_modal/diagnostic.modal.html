@@ -1,0 +1,40 @@
+<div class="modal fade" id="diagnosticModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h3 class="modal-title text-center" ng-if="dm.type == 'delete'">{{dm.message.title}}</h3>
+                <div ng-if="dm.type != 'delete'"  class="row">
+                    <div class="col-sm-10">
+                        <form class="form-horizontal">
+                            <!--类型-->
+                            <div class="form-group">
+                                <label for="soundType" class="col-sm-4 control-label">类型 <i class="fa fa-asterisk"></i></label>
+                                <div class="col-sm-8">
+                                    <select name="" class="form-control" id="soundType" ng-model="dm.curId" ng-disabled="dm.itemNameDisabled" ng-options="item.id as item.itemName for item in dm.items"></select>
+                                </div>
+                            </div>
+                            <!--听诊点名称-->
+                            <div class="form-group">
+                                <label for="soundName" class="col-sm-4 control-label">听诊点名称 <i class="fa fa-asterisk"></i></label>
+                                <div class="col-sm-8" >
+                                    <input  ng-model="dm.soundName" type="text" id="soundName" required class="form-control">
+                                </div>
+                            </div>
+                            <!--说明-->
+                            <div class="form-group">
+                                <label for="soundInstrution" class="col-sm-4 control-label">说明 </label>
+                                <div class="col-sm-8">
+                                    <textarea class="form-control" id="soundInstrution"  ng-model="dm.soundInstruction"/>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-danger" ng-click="dm.onClickHandle({soundName: dm.soundName, soundInstruction: dm.soundInstruction, modalType: dm.type})" data-dismiss="modal">确认</button>
+                <button class="btn btn-primary" data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+</div>

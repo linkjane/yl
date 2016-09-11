@@ -1,0 +1,35 @@
+{
+  "title": {
+    "text": ""
+  },
+  "tooltip": {},
+  "legend": {
+    "x":"850px",
+    "data":["data1","data2"]
+  },
+  "xAxis": {
+    "data": ["jay","feb","may","jun","jul"]
+  },
+  "yAxis": {},
+  "series": [
+    {
+      "name": "教师",
+      "type": "line",
+      "data": [630, 300, 350, 420, 210]
+    },
+    {
+      "name": "学生",
+      "type": "line",
+      "data": [180, 580, 500, 10, 150]
+    }
+  ],
+  "grid": {
+    "x": 80,
+    "y": 30,
+    "x2": 80,
+    "y2": 60,
+    "backgroundColor": "rgba(0,0,0,0)",
+    "borderWidth": 1,
+    "borderColor": "#ccc"
+  }
+}

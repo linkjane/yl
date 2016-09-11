@@ -1,0 +1,86 @@
+<div class="container-fluid bgPadding diagnostic" >
+    <div class="row">
+        <div class="col-md-3">
+            <div class="row">
+                <div class="treeView">
+                    <ul>
+                        <li ng-repeat="item in items">
+                            <span class="glyphicon glyphicon-triangle-bottom">
+                                {{item.itemName}}
+                                <a href="javascript:;">
+                                    <i class="fa fa-plus-square-o" ng-click="addClickHandle($event)"></i>
+                                </a>
+                            </span>
+                            <ul>
+                                <li ng-repeat="v in item.itemArray" ng-click="itemClickHandle($event)">
+                                    <span ng-bind="v.soundName"></span>
+                                    <span>
+                                        <a href="javascript:;" ng-click="editClickHandle($event, $index)">
+                                            <i class="fa fa-pencil"></i>
+                                        </a>
+                                        <a href="javascript:;" ng-click="deleteClickHandle($event, $index)">
+                                            <i class="fa fa-trash"></i>
+                                        </a>
+                                    </span>
+
+                                </li>
+                            </ul>
+                        </li>
+                        <li>病例</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="row">
+                <div class="select_panel col-md-12">
+                    <div class="input-group input-group-sm select_box">
+                        <input type="text" class="form-control" placeholder="请输入关键字搜索">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="table_panel col-md-12">
+                    <div class="btn_panel">
+                        <button class="btn btn-primary" data-target="#updateUser" data-toggle="modal"><span class="glyphicon glyphicon-plus"></span>添加内容</button>
+                        <button class="btn btn-primary" data-target="#deleteUser_model" data-toggle="modal"><span class="glyphicon glyphicon-trash"></span>批量删除</button>
+                    </div><!-- Q -->
+                    <div class="table_box">
+                        <table class="table table-hover table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <th class="">选择</th>
+                                <th class="">序号</th>
+                                <th class="">类型</th>
+                                <th class="">标题</th>
+                                <th class="">所属模块</th>
+                                <th class="">操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr><!-- bind data -->
+                                <td class=""><input type="checkbox" ng-model="userlist.status"></td>
+                                <td class="" ng-bind="">[数据绑定]</td><!--<td class="">{{(paginationConf.currentPage - 1) * paginationConf.itemsPerPage + $index + 1}}</td>-->
+                                <td class="" ng-bind="">[数据绑定]</td>
+                                <td class="" ng-bind="">[数据绑定]</td>
+                                <td class="" ng-bind="">[数据绑定]</td>
+                                <td class="">
+                                    <span class="glyphicon glyphicon-trash" data-target="#deleteUserForId_model" data-toggle="modal"></span>
+                                    <span class="glyphicon glyphicon-pencil" data-target="#updateUser" data-toggle="modal"></span>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div page pagination-conf="paginationConf" pagination-click="getUserData()"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <diagnostic-modal cur-id="currentId" edit-modal="editModal" type="modalType" items="items" on-click-handle="onClickHandle(soundName, soundInstruction, modalType)" hash="cTimestamp" message="deleteMessage"></diagnostic-modal>
+    <prompt-modal message="message" pmid="promptModal"></prompt-modal>
+</div>

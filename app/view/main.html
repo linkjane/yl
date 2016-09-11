@@ -1,0 +1,41 @@
+<div id="main_title">
+    <div class="title_box">
+        <!-- userInfo -->
+    </div>
+</div>
+<div>
+    <div class="TreeView_box">
+        <img  src="img/LOGO.jpg" alt=""/>
+        <ul id="main_ListTree">
+            <li id="home" class="list" ui-sref=".home"><span class="glyphicon glyphicon-home"></span>首页</li>
+            <li id="count" class="list"><span class="glyphicon glyphicon-stats"></span>统计<span style="margin-left: 38px" class="glyphicon glyphicon-triangle-bottom"></span></li>
+            <div id="count_list">
+                <li id="count_addUser" ui-sref=".countAddUser" class="list">新增用户</li>
+                <li id="count_totalUser" ui-sref=".countTotalUser" class="list">累计用户</li>
+                <li id="count_silentUser" ui-sref=".countSilentUser" class="list">沉默用户</li>
+                <li id="count_startUp" ui-sref=".countStartUp" class="list">启动次数</li>
+                <li id="count_weekUser" ui-sref=".countWeekUser" class="list">周用户构成</li>
+                <li id="count_activeUser" ui-sref=".countActiveUser" class="list">活跃用户构成</li>
+                <li id="count_keepUser" ui-sref=".countRetainedUser" class="list">留存用户</li>
+                <li id="count_nextDayKeepUser" ui-sref=".countNextDayKeepUser" class="list">次日留存</li>
+                <li id="count_NowAddUser" ui-sref=".countNowAddUser" class="list">实时新增人数统计</li>
+            </div>
+            <li id="user" class="list"><span class="glyphicon glyphicon-user"></span>用户<span style="margin-left: 38px" class="glyphicon glyphicon-triangle-bottom"></span></li>
+            <div id="user_list">
+                <li id="userSetting" class="list" ui-sref=".userSetting" style="">用户管理</li>
+                <li id="classSetting" class="list" ui-sref=".classSetting" style="">群组管理</li>
+            </div>
+            <li id="content" class="list"><span class="glyphicon glyphicon-pencil"></span>内容发布<span class="glyphicon glyphicon-triangle-bottom"></span></li>
+            <div id="content_list">
+                <li id="diagnostics" class="list" ui-sref=".sound">诊断学</li>
+                <li id="addModel" class="list">添加模块</li>
+            </div>
+            <li id="message" class="list"><span class="glyphicon glyphicon-envelope"></span>消息推送</li>
+            <li id="systemSetting" class="list"><span class="glyphicon glyphicon glyphicon-cog"></span>系统设置<span class="glyphicon glyphicon-triangle-bottom"></span></li>
+            <div id="systemSetting_list" style="">
+                <li id="BootPage" class="list" style="">开机画面</li>
+            </div>
+        </ul>
+    </div>
+    <div ui-view="" class="main_view"><!-- ui-view --></div>
+</div>

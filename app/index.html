@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html ng-app="routerApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>天堰科技 医学堂后台管理系统</title>
+
+    <!-- CSS样式库 -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../node_modules/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.min.css"/>
+    <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
+
+    <!-- CSS加载 -->
+    <link rel="stylesheet" href="../app/css/login.css"/>
+    <link rel="stylesheet" href="../app/css/main.css"/>
+    <link rel="stylesheet" href="../app/css/home.css"/>
+    <link rel="stylesheet" href="../app/css/userSetting.css"/>
+    <link rel="stylesheet" href="../app/css/classSetting.css"/>
+    <link rel="stylesheet" href="../app/css/modal.css"/>
+    <link rel="stylesheet" href="../app/css/content.css"/>
+    <link rel="stylesheet" href="../app/css/count.css"/>
+    <link rel="stylesheet" href="../app/css/bootstrap-extend.css"/>
+    <link rel="stylesheet" href="../app/css/diagnostic.css">
+    <!-- js框架加载 -->
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../node_modules/angular/angular.min.js"></script>
+    <script src="../node_modules/ui-route/release/angular-ui-router.min.js"></script>
+    <script src="../node_modules/echarts-master/dist/echarts.min.js"></script>
+    <script src="../node_modules/moment/moment.js"></script>
+    <script src="../node_modules/bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="../node_modules/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+
+    <!-- js加载 -->
+    <script src="../app/js/app.js"></script>
+    <script src="../app/js/YXT-chartStyle.js"></script>
+
+    <script src="../app/js/controller/login_ctrl.js"></script>
+    <script src="../app/js/controller/main_ctrl.js"></script>
+    <script src="../app/js/controller/home_ctrl.js"></script>
+    <script src="../app/js/controller/userSetting_ctrl.js"></script>
+    <script src="../app/js/controller/classSetting_ctrl.js"></script>
+    <script src="../app/js/controller/diagnostic_ctrl.js"></script>
+    <script src="../app/js/controller/count_addUser_ctrl.js"></script>
+    <script src="../app/js/controller/count_totalUser_ctrl.js"></script>
+    <script src="../app/js/controller/count_retainedUser_ctrl.js"></script>
+
+    <script src="../app/js/services/login_Service.js"></script>
+    <script src="../app/js/services/home_Services.js"></script>
+    <script src="../app/js/services/userSetting_Services.js"></script>
+    <script src="../app/js/services/classSetting_Services.js"></script>
+    <script src="../app/js/services/count_Service.js"></script>
+
+    <script src="../app/js/directive/main_directive.js"></script>
+    <script src="../app/js/directive/home_directive.js"></script>
+    <script src="../app/js/directive/userSetting_directive.js"></script>
+    <script src="../app/js/dir1ective/count_directive.js"></script>
+
+    <!--components-->
+    <script src="../app/js/directive/diagnostic_modal_component.js"></script>
+    <script src="../app/js/directive/prompt_modal_component.js"></script>
+
+    <script src="../app/js/directive/page/page.js"></script>
+    <script src="../app/js/chart.js"></script>
+</head>
+<body style="background-color:#f2f2f2">
+
+<div ui-view="">
+    <!-- 路由起始页面 -->
+</div>
+
+</body>
+</html>

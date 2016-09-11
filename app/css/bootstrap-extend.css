@@ -1,0 +1,134 @@
+/*
+      bootstrap覆盖类
+*/
+
+/*图标*/
+li span.glyphicon{
+    margin-right: 25px;
+    margin-left: 10px;
+}
+
+.form-control{
+    z-index: -1;
+}
+
+.glyphicon{
+    margin-right: 5px;
+}
+
+span button span.glyphicon{
+    margin-right: 0px;
+}
+
+/*模态框-圆角*/
+.modal-content{
+    border-radius: 20px 20px 0px 0px;
+    width: 450px;
+}
+
+/*模态框-头部*/
+.modal-header{
+    background-color: #4682b4;
+    border-radius: 18px 18px 0px 0px;
+    font-family: 微软雅黑;
+    color: #FFFFFF;
+    height: 45px;
+}
+
+/*模态框-脚部*/
+.modal-footer{
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+/*模态框-label*/
+.control-label{
+    padding-right: 0px;
+    text-align: right;
+}
+.modal-dialog{
+    width: 450px;
+}
+
+.pagination{
+    margin: 5px 0;
+}
+
+.form-control{
+    z-index: -1;
+}
+
+.btn-primary{
+    background-color: #999999;
+    border-color: #999999;
+    border-radius: 0px;
+}
+.btn-primary:hover{
+    background-color: #787878;
+    border-color: #787878;
+}
+.btn-primary:active{
+    background-color: #646464;
+    border-color: #646464;
+}
+
+.btn-primary:focus{
+    background-color: #545454;
+    border-color: #545454;
+}
+
+.btn-primary.active:hover{
+    background-color: #545454;
+    border-color: #545454;
+}
+
+.btn-success{
+    background-color: #4682b4;
+    border-color: #4682b4;
+}
+
+.btn-success:active{
+    background-color: #006dcc;
+    border-color: #006dcc;
+}
+
+.btn-success:hover{
+    background-color: #006dcc;
+    border-color: #006dcc;
+}
+
+.btn-success:focus{
+    background-color: #006dcc;
+    border-color: #006dcc;
+}
+
+.btn-success:active:hover{
+    background-color: #006dcc;
+    border-color: #006dcc;
+}
+
+div.modal-footer button{
+    border-radius: 3px;
+}
+
+div.panel-footer button{
+    border-radius: 3px;
+}
+
+.panel{
+    border-radius: 10px;
+}
+
+.panel-heading{
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.panel-footer{
+    background-color: #f2f2f2;
+    text-align: center;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}

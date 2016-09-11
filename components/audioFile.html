@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../app/css/bootstrap-extend.css"/>
+    <link rel="stylesheet" href="css/UpdateUser_model.css"/>
+    <link rel="stylesheet" href="css/AddmemberForClass_model.css"/>
+    <link rel="stylesheet" href="css/sound.css"/>
+    <title></title>
+</head>
+<body>
+<button class="btn btn-default" data-target="#audioFile" data-toggle="modal">audioFile</button>
+<div id="audioFile" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p class="panel-title"><span class="glyphicon glyphicon-pencil"></span>音源</p>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <form action="" class="form-horizontal">
+                                <div class="form-group modal_sound">
+                                    <label class="col-xs-3 control-label" for="audioTag">听诊点：</label>
+                                    <div class="col-xs-9">
+                                        <input id="audioTag" type="text" class="form-control modal_input" disabled/>
+                                    </div>
+                                </div>
+                                <div class="form-group modal_sound">
+                                    <label class="col-xs-3 control-label" for="">听诊点音源：</label>
+                                    <div class="col-xs-9">
+                                        <div class="MediaPlayBox">
+                                            <div class="dropdown" style="float: right">
+                                                <button id="addAudioFile" class="btn btn-primary"  data-toggle="dropdown"><span class="glyphicon glyphicon-plus"></span>添加音源</button>
+                                                <ul class="dropdown-menu" aria-labelledby="addAudioFile">
+                                                    <li>添加本地音源</li>
+                                                    <li>添加资源库音源</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group modal_sound">
+                                    <label class="col-xs-3 control-label" for="textFile">诊断解析：</label>
+                                    <div class="col-xs-9">
+                                        <!-- HTML 编辑器位置 -->
+                                        <textarea id="textFile" class="form-control modal_input" rows="6"></textarea>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-success btn_footer_size">保&nbsp;&nbsp;存</button>
+                <button class="btn btn-primary btn_footer_size">取&nbsp;&nbsp;消</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

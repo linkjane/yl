@@ -1,0 +1,84 @@
+<div class="container-fluid bgPadding">
+    <div class="countHead_panel">
+        <div class="row">
+            <div class="col-md-3 countTitle_panel">
+                <span class="countTitle">留存用户</span>
+            </div>
+            <div class="col-md-3 col-md-offset-6">
+                <div class="count_rightBtn">
+                    <button class="btn btn-default btn-xs">DAU</button>
+                    <button class="btn btn-default btn-xs">WAU</button>
+                    <button class="btn btn-default btn-xs">MAU</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="countBtn_panel">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="btn-group btn-group-sm">
+                    <button class="btn btn-default countBtn">非教师</button>
+                    <button class="btn btn-default countBtn">教师</button>
+                </div>
+            </div>
+            <div class="col-md-3 col-md-offset-6">
+                <div class="count_rightBtn">
+                    <select class="form-control form-group-sm count_selectList" name="" id="">
+                        <option>[数据绑定]</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="count_table">
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-responsive trBorder">
+                    <thead class="trBorder">
+                    <tr>
+                        <td class="trBorder">首次使用时间</td>
+                        <td class="trBorder">新增用户</td>
+                        <td class="">留存率</td>
+                        <td><!-- null --></td>
+                        <td><!-- null --></td>
+                        <td><!-- null --></td>
+                        <td><!-- null --></td>
+                        <td><!-- null --></td>
+                        <td><!-- null --></td>
+                        <td><!-- null --></td>
+                        <td><!-- null --></td>
+                    </tr>
+                    <tr>
+                        <td><!-- null --></td>
+                        <td><!-- null --></td>
+                        <td class="trBorder">1周后</td>
+                        <td class="trBorder">2周后</td>
+                        <td class="trBorder">3周后</td>
+                        <td class="trBorder">4周后</td>
+                        <td class="trBorder">5周后</td>
+                        <td class="trBorder">6周后</td>
+                        <td class="trBorder">7周后</td>
+                        <td class="trBorder">8周后</td>
+                        <td class="trBorder">9周后</td>
+                    </tr>
+                    </thead>
+                    <tbody class="NoBorder">
+                    <tr ng-repeat="list in tableData">
+                        <td class={{}} ng-bind="list.time">[数据绑定]</td>
+                        <td ng-bind="list.addUser">[数据绑定]</td>
+                        <td ng-bind="list.time1">[数据绑定]</td>
+                        <td ng-bind="list.time2">[数据绑定]</td>
+                        <td ng-bind="list.time3">[数据绑定]</td>
+                        <td ng-bind="list.time4">[数据绑定]</td>
+                        <td ng-bind="list.time5">[数据绑定]</td>
+                        <td ng-bind="list.time6">[数据绑定]</td>
+                        <td ng-bind="list.time7">[数据绑定]</td>
+                        <td ng-bind="list.time8">[数据绑定]</td>
+                        <td ng-bind="list.time9">[数据绑定]</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

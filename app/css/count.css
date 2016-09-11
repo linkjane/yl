@@ -1,0 +1,83 @@
+.countHead_panel {
+    background-color: #FFFFFF;
+    margin-top: 18px;
+    padding: 20px 20px 5px 20px;
+}
+
+.countChart_panel{
+    background-color: #FFFFFF;
+}
+
+.countBtn_panel{
+    background-color: #FFFFFF;
+    padding: 10px 20px;
+}
+
+.countTable_panel{
+    background-color: #FFFFFF;
+    padding: 20px;
+    margin-top: 18px;
+    margin-bottom: 20px;
+}
+
+.countTitle_panel{
+    padding-bottom: 10px;
+}
+
+.countBtn{
+    width: 100px;
+}
+
+.countTitle{
+    font-size: 18px;
+    font-family: 微软雅黑;
+}
+
+.exportDataBtn{
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    font-size: 20px;
+    float: right;
+}
+
+.exportDataBtn:hover{
+    background-color: #A7A7A7;
+}
+
+.countDateInput{
+    width: 230px;
+}
+
+.count_selectList{
+    width: 180px;
+    height: 30px;
+    border-radius: 3px;
+    float: left;
+}
+
+.count_rightBtn{
+    float: right;
+}
+
+.count_table{
+    background-color: #FFFFFF;
+    padding: 10px 20px;
+}
+
+.trBorder{
+    border: 1px #ddd solid;
+    text-align: center;
+}
+
+.table>tbody.NoBorder>tr>td{
+    border: 0px;
+}
+
+.trBgON{
+    background-color: #b6f2f3;
+}
+
+.trBgOFF{
+    background-color: #FFFFFF;
+}
