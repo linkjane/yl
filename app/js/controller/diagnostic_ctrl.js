@@ -56,9 +56,9 @@ routerApp.controller('diagnosticCtrl', ['$scope', '$timeout', function ($scope, 
 
     $scope.currentItem = items[0];
 
-    $scope.currentItemIndex = 0;
-
     $scope.currentId = 1;
+
+    $scope.currentItemIndex = 0;
 
     /*默认弹出框是增加框*/
     $scope.modalType = addModal;
@@ -111,6 +111,9 @@ routerApp.controller('diagnosticCtrl', ['$scope', '$timeout', function ($scope, 
     $scope.onClickHandle = function (soundName, soundInstruction, modalType) {
         /*隐藏modal 显示loading*/
 
+        $('#diagnosticModal').modal('hide');
+
+
         /*先判断是添加还是修改*/
         if (modalType == addModal) {
             /*添加*/
@@ -131,6 +134,12 @@ routerApp.controller('diagnosticCtrl', ['$scope', '$timeout', function ($scope, 
             }
         } else if (modalType == editModal){
             /*修改*/
+            /*如果一样, 就直接返回不用发送请求*/
+            var currentSoundPoint = $scope.currentItem.itemArray[$scope.currentItemIndex];
+            if (soundName == currentSoundPoint.soundName && soundInstruction == currentSoundPoint.soundInstruction) {
+                return;
+            }
+
             /*发送http请求接受promise对象*/
             if (true) {
                 $scope.currentItem.itemArray[$scope.currentItemIndex] = {
